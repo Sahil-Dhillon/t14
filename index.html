@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TietFourteen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <section class="home">
+
+        <header>
+            <div><a href="#" class="logo" onclick="dark()">TietFourteen</a>
+                <img class="sun darktoggle" src="https://img.icons8.com/clouds/50/000000/sun.png" />
+                <img class="moon darktoggle" src="https://img.icons8.com/plasticine/50/000000/crescent-moon.png" /></div>
+
+            <ul class="navigation">
+                <li><a onclick="page('home')" href="#" style="--i:1" class="active">Home</a></li>
+                <li><a onclick="page('schedule')" href="#" style="--i:2">Schedule</a></li>
+                <li><a onclick="page('exams')" href="#" style="--i:3">Exams</a></li>
+                <li><a onclick="page('study')" href="#" style="--i:4">Study Material</a></li>
+            </ul>
+            <div class="toggle-button" onclick="navtoggle(this,0)">
+                <span class="bar1 bar"></span>
+                <span class="bar2 bar"></span>
+                <span class="bar3 bar"></span>
+            </div>
+        </header>
+        <div class="tnav">
+            <div class="smallnav1 smallnavlinks">
+                <ul>
+                    <li><a onclick="page('home')" href="#" class="active whitetext">Home</a></li>
+                    <li><a class="whitetext" onclick="page('schedule')" href="#">Schedule</a></li>
+                    <li><a class="whitetext" onclick="page('exams')" href="#">Exams</a></li>
+                    <li><a class="whitetext" onclick="page('study')" href="#">Study Material</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="scoe14"> <img id="slogo" class="scoe14" src="img/logowhite.png" alt=""></div>
+            <div class="textBox">
+                <h2>COE14</h2>
+                <p class="homep">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tempore provident non nobis fuga quod voluptatem ab necessitatibus suscipit expedita!</p>
+            </div>
+            <!-- <div class="coe14"></div> -->
+            <img id="logo" src="img/logowhite.png" class="coe14" alt="">
+
+        </div>
+
+        <ul class="sco">
+            <li style="--i:6">
+                <span class="tooltiptext">Follow me!</span>
+                <a target="_blank" href="https://www.instagram.com/zsahildhillon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="35" height="35"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#666666"><path d="M49.92548,0c-27.49519,0 -49.92548,22.43029 -49.92548,49.92548v72.14904c0,27.49519 22.43029,49.92548 49.92548,49.92548h72.14904c27.49519,0 49.92548,-22.43029 49.92548,-49.92548v-72.14904c0,-27.49519 -22.43029,-49.92548 -49.92548,-49.92548zM49.92548,13.23077h72.14904c20.33714,0 36.69471,16.33173 36.69471,36.69471v72.14904c0,20.33714 -16.33173,36.69471 -36.69471,36.69471h-72.14904c-20.33714,0 -36.69471,-16.33173 -36.69471,-36.69471v-72.14904c0,-20.33714 16.33173,-36.69471 36.69471,-36.69471zM135.61538,26.46154c-5.47837,0 -9.92308,4.44471 -9.92308,9.92308c0,5.47837 4.44471,9.92308 9.92308,9.92308c5.47837,0 9.92308,-4.44471 9.92308,-9.92308c0,-5.47837 -4.44471,-9.92308 -9.92308,-9.92308zM86,39.69231c-25.50541,0 -46.30769,20.80228 -46.30769,46.30769c0,25.50541 20.80228,46.30769 46.30769,46.30769c25.50541,0 46.30769,-20.80228 46.30769,-46.30769c0,-25.50541 -20.80228,-46.30769 -46.30769,-46.30769zM86,52.92308c18.34736,0 33.07692,14.72957 33.07692,33.07692c0,18.34736 -14.72956,33.07692 -33.07692,33.07692c-18.34735,0 -33.07692,-14.72956 -33.07692,-33.07692c0,-18.34735 14.72957,-33.07692 33.07692,-33.07692z"></path></g></g></svg></a>
+            </li>
+            <li style="--i:7">
+                <span class="tooltiptext">Dm me for any changes</span>
+                <a target="_blank" href="https://wa.me/917082599140"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="40" height="40"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#666666"><path d="M136.7185,35.31733c-13.51633,-13.5235 -31.49033,-20.97683 -50.63967,-20.984c-39.45967,0 -71.5735,32.0995 -71.58783,71.55917c-0.00717,12.61333 3.2895,24.92567 9.55317,35.776l-9.71083,35.99817l37.50317,-8.86517c10.45617,5.70467 22.22383,8.7075 34.2065,8.71467h0.02867c39.4525,0 71.56633,-32.10667 71.58783,-71.55917c0.01433,-19.12783 -7.42467,-37.109 -20.941,-50.63967zM121.10233,111.47033c-1.49067,4.17817 -8.7935,8.20583 -12.07583,8.49967c-3.28233,0.301 -6.35683,1.4835 -21.46417,-4.472c-18.18183,-7.16667 -29.66283,-25.80717 -30.5515,-26.99683c-0.89583,-1.19683 -7.30283,-9.6965 -7.30283,-18.49717c0,-8.80067 4.6225,-13.12933 6.26367,-14.91383c1.64117,-1.79167 3.57617,-2.236 4.773,-2.236c1.18967,0 2.3865,0 3.42567,0.043c1.27567,0.05017 2.6875,0.11467 4.02767,3.08883c1.591,3.54033 5.06683,12.384 5.51117,13.27983c0.44433,0.89583 0.74533,1.94217 0.1505,3.13183c-0.59483,1.18967 -0.89583,1.935 -1.7845,2.98133c-0.89583,1.04633 -1.87767,2.32917 -2.68033,3.13183c-0.89583,0.88867 -1.8275,1.86333 -0.78833,3.64783c1.04633,1.79167 4.62967,7.64683 9.94733,12.384c6.837,6.09167 12.59183,7.9765 14.3835,8.8795c1.79167,0.89583 2.83083,0.74533 3.87717,-0.4515c1.04633,-1.18967 4.472,-5.21733 5.66167,-7.009c1.18967,-1.79167 2.3865,-1.49067 4.02767,-0.89583c1.64117,0.59483 10.43467,4.9235 12.21917,5.81933c1.79167,0.89583 2.98133,1.34017 3.42567,2.0855c0.44433,0.73817 0.44433,4.3215 -1.04633,8.49967z"></path></g></g></svg></a>
+            </li>
+            <li style="--i:8">
+                <span class="tooltiptext">Source Code</span>
+                <a target="_blank" href="https://github.com/Sahil-Dhillon/tiet14"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="40" height="40"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><path d="" fill="none"></path><path d="" fill="none"></path><g fill="#666666"><path d="M86,17.2c-37.9948,0 -68.8,30.8052 -68.8,68.8c0,32.23853 22.19947,59.21387 52.12747,66.67867c-0.32107,-0.9288 -0.52747,-2.00667 -0.52747,-3.34253v-11.75907c-2.79213,0 -7.47053,0 -8.64587,0c-4.70707,0 -8.8924,-2.02387 -10.922,-5.78493c-2.2532,-4.1796 -2.64307,-10.57227 -8.22733,-14.4824c-1.65693,-1.30147 -0.3956,-2.7864 1.5136,-2.58573c3.526,0.9976 6.45,3.41707 9.202,7.00613c2.74053,3.5948 4.03053,4.40893 9.1504,4.40893c2.48253,0 6.19773,-0.14333 9.69507,-0.69373c1.88053,-4.77587 5.13133,-9.17333 9.10453,-11.2488c-22.9104,-2.3564 -33.84387,-13.75427 -33.84387,-29.22853c0,-6.66213 2.838,-13.1064 7.65973,-18.53587c-1.5824,-5.38933 -3.57187,-16.38013 0.60773,-20.56547c10.30853,0 16.54067,6.68507 18.03707,8.49107c5.13707,-1.76013 10.77867,-2.75773 16.70693,-2.75773c5.93973,0 11.60427,0.9976 16.7528,2.7692c1.4792,-1.79453 7.71707,-8.50253 18.04853,-8.50253c4.1968,4.19107 2.1844,15.22773 0.5848,20.6056c4.79307,5.418 7.61387,11.84507 7.61387,18.49573c0,15.4628 -10.91627,26.85493 -33.79227,29.2228c6.2952,3.2852 10.8876,12.51587 10.8876,19.4704v15.67493c0,0.59627 -0.13187,1.02627 -0.20067,1.53653c26.80907,-9.39693 46.06733,-34.85293 46.06733,-64.87267c0,-37.9948 -30.8052,-68.8 -68.8,-68.8z"></path></g></g></g></svg></a>
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- schedule -->
+
+    <section id="schedule" class="schedule">
+        <header>
+            <a href="#" class="logo" onclick="dark()">TietFourteen</a>
+            <ul class="navigation">
+                <li><a onclick="page('home')" href="#" style="--i:1">Home</a></li>
+                <li><a onclick="page('schedule')" href="#" style="--i:2" class="active">Schedule</a></li>
+                <li><a onclick="page('exams')" href="#" style="--i:3">Exams</a></li>
+                <li><a onclick="page('study')" href="#" style="--i:4">Study Material</a></li>
+            </ul>
+            <div class="toggle-button" onclick="navtoggle(this,1)">
+                <span class="bar1 bar"></span>
+                <span class="bar2 bar"></span>
+                <span class="bar3 bar"></span>
+            </div>
+        </header>
+        <div id="tnav" class="tnav">
+            <div class="smallnav1 smallnavlinks">
+                <ul>
+                    <li><a class="whitetext" onclick="page('home')" href="#">Home</a></li>
+                    <li><a onclick="page('schedule')" href="#" class="active whitetext">Schedule</a></li>
+                    <li><a class="whitetext" onclick="page('exams')" href="#">Exams</a></li>
+                    <li><a class="whitetext" onclick="page('study')" href="#">Study Material</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab">
+            <table cellspacing="0" cellpadding="0" class="table-schedule">
+                <tr class="tabdays">
+                    <th> </th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+
+                </tr>
+                <tr style="--i:1">
+                    <th class="time">8:00</th>
+                    <td class="blanktdo"></td>
+                    <td class="uta18p">UTA018 P<span class="tooltiptext">hello</span></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+
+                </tr>
+                <tr style="--i:1.2">
+                    <th class="time">8:50</th>
+                    <td class="blanktde"></td>
+                    <td class="uta18p ">UTA018 P<span class="tooltiptext">hello</span></td>
+                    <td class="blanktde"></td>
+                    <td class="blanktde"></td>
+                    <td class="blanktde"></td>
+
+                </tr>
+                <tr style="--i:1.4">
+                    <th class="time">9:40</th>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+
+                </tr>
+                <tr style="--i:1.6">
+                    <th class="time">10:30</th>
+                    <td class="uec1p">UEC001 P<span class="tooltiptext">hello</span></td>
+                    <td class="uta15l">UTA015 L<span class="tooltiptext">hello</span></td>
+                    <td class="uec1p">UEC001 P<span class="tooltiptext">hello</span></td>
+                    <td class="blanktde"></td>
+                    <td class="uph4p">UPH004 P<span class="tooltiptext">hello</span></td>
+
+                </tr>
+                <tr style="--i:1.8">
+                    <th class="time">11:20</th>
+                    <td class="uec1p">UEC001 P<span class="tooltiptext">hello</span></td>
+                    <td class="uma4l">UMA004 L<span class="tooltiptext">hello</span></td>
+                    <td class="uta15l">UTA015 L<span class="tooltiptext">hello</span></td>
+                    <td class="uma4l">UMA004 L<span class="tooltiptext">hello</span></td>
+                    <td class="uph4p">UPH004 P<span class="tooltiptext">hello</span></td>
+
+                </tr>
+                <tr style="--i:2">
+                    <th class="time">12:10</th>
+                    <td class="uec1l">UEC001 L<span class="tooltiptext">hello</span></td>
+                    <td class="uta18l">UTA018 L<span class="tooltiptext">hello</span></td>
+                    <td class="uta18l">UTA018 L<span class="tooltiptext">hello</span></td>
+                    <td class="uec1l">UEC001 L<span class="tooltiptext">hello</span></td>
+                    <td class="uph4l">UPH004 L<span class="tooltiptext">hello</span></td>
+
+                </tr>
+                <tr style="--i:2.2">
+                    <th class="time">1:00</th>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+
+
+                </tr>
+                <tr style="--i:2.4">
+                    <th class="time">1:50</th>
+                    <td class="uph4l">UPH004 L<span class="tooltiptext">hello</span></td>
+                    <td class="uph4l">UPH004 L<span class="tooltiptext">hello</span></td>
+                    <td class="uma4t">UMA004 T<span class="tooltiptext">hello</span></td>
+                    <td class="blanktde"></td>
+                    <td class="uhu3l">UHU003 L<span class="tooltiptext">hello</span></td>
+
+                </tr>
+                <tr style="--i:2.6">
+                    <th class="time">2:40</th>
+                    <td class="uma4l">UMA004 L<span class="tooltiptext">hello</span></td>
+                    <td class="uta15p">UTA015 P<span class="tooltiptext">hello</span></td>
+                    <td class="uta15p">UTA015 P<span class="tooltiptext">hello</span></td>
+                    <td class="blanktdo"></td>
+                    <td class="uph4t">UPH004 T<span class="tooltiptext">hello</span></td>
+
+                </tr>
+                <tr style="--i:2.8">
+                    <th class="time">3:30</th>
+                    <td class="uta18l">UTA018 L<span class="tooltiptext">hello</span></td>
+                    <td class="uta15p">UTA015 P<span class="tooltiptext">hello</span></td>
+                    <td class="uta15p">UTA015 P<span class="tooltiptext">hello</span></td>
+                    <td class="blanktde"></td>
+                    <td class="uec1t">UEC001 T<span class="tooltiptext">hello</span></td>
+
+                </tr>
+                <tr style="--i:3">
+                    <th class="time">4:20</th>
+                    <td class="uhu3l">UHU003 L<span class="tooltiptext">hello</span></td>
+                    <td class="uhu3p">UHU003 P<span class="tooltiptext">hello</span></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+                    <td class="blanktdo"></td>
+
+                </tr>
+                <tr style="--i:3.2">
+                    <th class="time">5:10</th>
+                    <td class="blanktde"></td>
+                    <td class="uhu3p">UHU003 P<span class="tooltiptext">hello</span></td>
+                    <td class="blanktde"></td>
+                    <td class="blanktde"></td>
+                    <td class="blanktde"></td>
+
+                </tr>
+
+            </table>
+        </div>
+        <ul class="sco">
+            <li style="--i:6">
+                <span class="tooltiptext">Follow me!</span>
+                <a target="_blank" href="https://www.instagram.com/zsahildhillon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="35" height="35"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#666666"><path d="M49.92548,0c-27.49519,0 -49.92548,22.43029 -49.92548,49.92548v72.14904c0,27.49519 22.43029,49.92548 49.92548,49.92548h72.14904c27.49519,0 49.92548,-22.43029 49.92548,-49.92548v-72.14904c0,-27.49519 -22.43029,-49.92548 -49.92548,-49.92548zM49.92548,13.23077h72.14904c20.33714,0 36.69471,16.33173 36.69471,36.69471v72.14904c0,20.33714 -16.33173,36.69471 -36.69471,36.69471h-72.14904c-20.33714,0 -36.69471,-16.33173 -36.69471,-36.69471v-72.14904c0,-20.33714 16.33173,-36.69471 36.69471,-36.69471zM135.61538,26.46154c-5.47837,0 -9.92308,4.44471 -9.92308,9.92308c0,5.47837 4.44471,9.92308 9.92308,9.92308c5.47837,0 9.92308,-4.44471 9.92308,-9.92308c0,-5.47837 -4.44471,-9.92308 -9.92308,-9.92308zM86,39.69231c-25.50541,0 -46.30769,20.80228 -46.30769,46.30769c0,25.50541 20.80228,46.30769 46.30769,46.30769c25.50541,0 46.30769,-20.80228 46.30769,-46.30769c0,-25.50541 -20.80228,-46.30769 -46.30769,-46.30769zM86,52.92308c18.34736,0 33.07692,14.72957 33.07692,33.07692c0,18.34736 -14.72956,33.07692 -33.07692,33.07692c-18.34735,0 -33.07692,-14.72956 -33.07692,-33.07692c0,-18.34735 14.72957,-33.07692 33.07692,-33.07692z"></path></g></g></svg></a>
+            </li>
+            <li style="--i:7">
+                <span class="tooltiptext">Dm me for any changes</span>
+                <a target="_blank" href="https://wa.me/917082599140"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="40" height="40"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#666666"><path d="M136.7185,35.31733c-13.51633,-13.5235 -31.49033,-20.97683 -50.63967,-20.984c-39.45967,0 -71.5735,32.0995 -71.58783,71.55917c-0.00717,12.61333 3.2895,24.92567 9.55317,35.776l-9.71083,35.99817l37.50317,-8.86517c10.45617,5.70467 22.22383,8.7075 34.2065,8.71467h0.02867c39.4525,0 71.56633,-32.10667 71.58783,-71.55917c0.01433,-19.12783 -7.42467,-37.109 -20.941,-50.63967zM121.10233,111.47033c-1.49067,4.17817 -8.7935,8.20583 -12.07583,8.49967c-3.28233,0.301 -6.35683,1.4835 -21.46417,-4.472c-18.18183,-7.16667 -29.66283,-25.80717 -30.5515,-26.99683c-0.89583,-1.19683 -7.30283,-9.6965 -7.30283,-18.49717c0,-8.80067 4.6225,-13.12933 6.26367,-14.91383c1.64117,-1.79167 3.57617,-2.236 4.773,-2.236c1.18967,0 2.3865,0 3.42567,0.043c1.27567,0.05017 2.6875,0.11467 4.02767,3.08883c1.591,3.54033 5.06683,12.384 5.51117,13.27983c0.44433,0.89583 0.74533,1.94217 0.1505,3.13183c-0.59483,1.18967 -0.89583,1.935 -1.7845,2.98133c-0.89583,1.04633 -1.87767,2.32917 -2.68033,3.13183c-0.89583,0.88867 -1.8275,1.86333 -0.78833,3.64783c1.04633,1.79167 4.62967,7.64683 9.94733,12.384c6.837,6.09167 12.59183,7.9765 14.3835,8.8795c1.79167,0.89583 2.83083,0.74533 3.87717,-0.4515c1.04633,-1.18967 4.472,-5.21733 5.66167,-7.009c1.18967,-1.79167 2.3865,-1.49067 4.02767,-0.89583c1.64117,0.59483 10.43467,4.9235 12.21917,5.81933c1.79167,0.89583 2.98133,1.34017 3.42567,2.0855c0.44433,0.73817 0.44433,4.3215 -1.04633,8.49967z"></path></g></g></svg></a>
+            </li>
+            <li style="--i:8">
+                <span class="tooltiptext">Source Code</span>
+                <a target="_blank" href="https://github.com/Sahil-Dhillon/tiet14"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="40" height="40"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><path d="" fill="none"></path><path d="" fill="none"></path><g fill="#666666"><path d="M86,17.2c-37.9948,0 -68.8,30.8052 -68.8,68.8c0,32.23853 22.19947,59.21387 52.12747,66.67867c-0.32107,-0.9288 -0.52747,-2.00667 -0.52747,-3.34253v-11.75907c-2.79213,0 -7.47053,0 -8.64587,0c-4.70707,0 -8.8924,-2.02387 -10.922,-5.78493c-2.2532,-4.1796 -2.64307,-10.57227 -8.22733,-14.4824c-1.65693,-1.30147 -0.3956,-2.7864 1.5136,-2.58573c3.526,0.9976 6.45,3.41707 9.202,7.00613c2.74053,3.5948 4.03053,4.40893 9.1504,4.40893c2.48253,0 6.19773,-0.14333 9.69507,-0.69373c1.88053,-4.77587 5.13133,-9.17333 9.10453,-11.2488c-22.9104,-2.3564 -33.84387,-13.75427 -33.84387,-29.22853c0,-6.66213 2.838,-13.1064 7.65973,-18.53587c-1.5824,-5.38933 -3.57187,-16.38013 0.60773,-20.56547c10.30853,0 16.54067,6.68507 18.03707,8.49107c5.13707,-1.76013 10.77867,-2.75773 16.70693,-2.75773c5.93973,0 11.60427,0.9976 16.7528,2.7692c1.4792,-1.79453 7.71707,-8.50253 18.04853,-8.50253c4.1968,4.19107 2.1844,15.22773 0.5848,20.6056c4.79307,5.418 7.61387,11.84507 7.61387,18.49573c0,15.4628 -10.91627,26.85493 -33.79227,29.2228c6.2952,3.2852 10.8876,12.51587 10.8876,19.4704v15.67493c0,0.59627 -0.13187,1.02627 -0.20067,1.53653c26.80907,-9.39693 46.06733,-34.85293 46.06733,-64.87267c0,-37.9948 -30.8052,-68.8 -68.8,-68.8z"></path></g></g></g></svg></a>
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- exams -->
+
+    <section id="exams" class="exams">
+        <header>
+            <a href="#" class="logo" onclick="dark()">TietFourteen</a>
+            <ul class="navigation">
+                <li><a onclick="page('home')" href="#" style="--i:1">Home</a></li>
+                <li><a onclick="page('schedule')" href="#" style="--i:2">Schedule</a></li>
+                <li><a onclick="page('exams')" href="#" style="--i:3" class="active">Exams</a></li>
+                <li><a onclick="page('study')" href="#" style="--i:4">Study Material</a></li>
+            </ul>
+            <div class="toggle-button" onclick="navtoggle(this,2)">
+                <span class="bar1 bar"></span>
+                <span class="bar2 bar"></span>
+                <span class="bar3 bar"></span>
+            </div>
+        </header>
+        <div class="tnav">
+            <div class="smallnav1 smallnavlinks">
+                <ul>
+                    <li><a class="whitetext" onclick="page('home')" href="#">Home</a></li>
+                    <li><a class="whitetext" onclick="page('schedule')" href="#">Schedule</a></li>
+                    <li><a onclick="page('exams')" href="#" class="active whitetext">Exams</a></li>
+                    <li><a class="whitetext" onclick="page('study')" href="#">Study Material</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- study material -->
+    <section id="study" class="study">
+        <header>
+            <a href="#" class="logo" onclick="dark()">TietFourteen</a>
+            <ul class="navigation">
+                <li><a onclick="page('home')" href="#" style="--i:1">Home</a></li>
+                <li><a onclick="page('schedule')" href="#" style="--i:2">Schedule</a></li>
+                <li><a onclick="page('exams')" href="#" style="--i:3">Exams</a></li>
+                <li><a onclick="page('study')" href="#" style="--i:4" class="active">Study Material</a></li>
+            </ul>
+            <div class="toggle-button" onclick="navtoggle(this,3)">
+                <span class="bar1 bar"></span>
+                <span class="bar2 bar"></span>
+                <span class="bar3 bar"></span>
+            </div>
+        </header>
+        <div class="tnav">
+            <div class="smallnav1 smallnavlinks">
+                <ul>
+                    <li><a class="whitetext" onclick="page('home')" href="#">Home</a></li>
+                    <li><a class="whitetext" onclick="page('schedule')" href="#">Schedule</a></li>
+                    <li><a class="whitetext" onclick="page('exams')" href="#">Exams</a></li>
+                    <li><a onclick="page('study')" href="#" class="active whitetext">Study Material</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

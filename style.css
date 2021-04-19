@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,700;0,800;1,700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+/* colors */
+
+.uta18l {
+    background-color: #3498db;
+    cursor: pointer;
+}
+
+.uta18p {
+    background-color: #5aa7da;
+    cursor: pointer;
+}
+
+.uta15l {
+    background-color: #9b59b6;
+    cursor: pointer;
+}
+
+.uta15p {
+    background-color: #a274b5;
+    cursor: pointer;
+}
+
+.uec1l {
+    background-color: #048339;
+    cursor: pointer;
+}
+
+.uec1p {
+    background-color: #02b54c;
+    cursor: pointer;
+}
+
+.uec1t {
+    background-color: #01bd4f;
+    cursor: pointer;
+}
+
+.uph4l {
+    background-color: #a03e33;
+    cursor: pointer;
+}
+
+.uph4p {
+    background-color: #c95447;
+    cursor: pointer;
+}
+
+.uph4t {
+    background-color: #f76d5e;
+    cursor: pointer;
+}
+
+.uma4p {
+    background-color: #ee9607;
+    cursor: pointer;
+}
+
+.uma4l {
+    background-color: #f0a630;
+    cursor: pointer;
+}
+
+.uma4t {
+    background-color: #edb04e;
+    cursor: pointer;
+}
+
+.uhu3l {
+    background-color: #e8209e;
+    cursor: pointer;
+}
+
+.uhu3p {
+    background-color: #e259b0;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+    /* background-color: black; */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.home {
+    transition: 0.8s;
+    /* display: none; */
+}
+
+.exams {
+    transition: 0.8s;
+    display: none;
+}
+
+.study {
+    transition: 0.8s;
+    display: none;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    transition: 0.8s;
+}
+
+header .logo {
+    position: relative;
+    color: #ff5e8e;
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 700;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.1s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #0169b2;
+    font-weight: 400;
+    font-size: 1.1em;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 8px 18px;
+    text-decoration: none;
+    user-select: none;
+    transition: 0.4s ease-in-out;
+    font-family: 'Nunito';
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+header ul li a.active,
+header ul li a:hover {
+    /* background: #0169b2; */
+    color: #ff5e8e;
+    /* border-radius: 3px; */
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 550px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.content .textBox h2 {
+    color: #0169b2;
+    font-size: 4.5em;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-weight: 600;
+    font-family: 'Nunito';
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 1.5s;
+}
+
+.content .textBox p {
+    font-size: 1.2em;
+    /* color: white; */
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 1.5s;
+    transition: 0.8s;
+}
+
+.homep {
+    color: white;
+}
+
+.home .sco {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .sco li {
+    list-style: none;
+    opacity: 0;
+    margin-right: 30px;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(2s + 0.1s * var(--i));
+}
+
+.home .sco li a {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.home .sco li a:hover {
+    transform: translateY(-10px);
+}
+
+.sco {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sco li {
+    list-style: none;
+    opacity: 0;
+    margin-right: 30px;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc( 1s + 0.1s * var(--i));
+}
+
+.sco li a {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.sco li a:hover {
+    transform: translateY(-10px);
+}
+
+.sco li .tooltiptext {
+    font-family: 'Nunito';
+    font-weight: 100;
+    font-size: 0.7em;
+    visibility: hidden;
+    width: 100px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    /*position */
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    left: 80%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.sco li:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    bottom: 125%;
+}
+
+.coe14 {
+    position: relative;
+    max-width: 350px;
+    padding-top: 18px;
+    /* bottom: 0;
+    right: 150px; */
+    opacity: 0;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 2s;
+}
+
+
+/*  toggle bar  */
+
+.toggle-button {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.toggle-button .bar1 {
+    transition: 0.5s;
+}
+
+.bar {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px;
+}
+
+.toggle-button .bar2 {
+    transition: 0.3s;
+}
+
+.toggle-button .bar3 {
+    transition: 0.5s;
+}
+
+
+/* Rotate first bar */
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+
+/* Fade out the second bar */
+
+.change .bar2 {
+    opacity: 0;
+}
+
+
+/* Rotate last bar */
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.smallnav1 {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.scoe14 {
+    display: none;
+    opacity: 0;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 2s;
+}
+
+
+/* *********************Schedule****************** */
+
+.schedule {
+    transition: 0.8s;
+    display: none;
+    justify-content: center;
+    padding-top: 130px;
+}
+
+
+/* table */
+
+.tab {
+    max-width: 100%;
+    opacity: 0;
+    animation: fade_in 0.2s linear forwards;
+    animation-delay: 0.5s;
+}
+
+table {
+    color: #efefef;
+}
+
+.time {
+    transition: 0.8s;
+}
+
+tr {
+    background-color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc( 0.2s * var(--i));
+}
+
+th {
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    padding: 0.3em;
+    width: 10em;
+}
+
+.blanktde {
+    background-color: rgb(28, 28, 28);
+    transition: 0.8s;
+}
+
+.blanktdo {
+    background-color: rgb(38, 38, 38);
+    transition: 0.8s;
+}
+
+td {
+    font-family: 'Nunito';
+    font-weight: 100;
+    padding: 0.2em;
+    width: 10em;
+    position: relative;
+    /* display: inline-block; */
+}
+
+
+/* Tooltip text */
+
+td .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /*position */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+
+/* Tooltip arrow */
+
+td .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) transparent transparent transparent;
+}
+
+td:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    bottom: 80%;
+}
+
+
+/* responsive */
+
+@media (max-width: 1000px) {
+    .content .textBox h2 {
+        /* display: none; */
+        font-size: 3.5rem;
+        opacity: 0;
+        animation: slide_right 0.5s linear forwards;
+        animation-delay: 1.5s;
+    }
+    .coe14 {
+        display: none;
+    }
+    .scoe14 {
+        display: block;
+        width: 250px;
+        /* transition: 0.8s; */
+        /* opacity: 0;
+        animation: slide_left 0.5s linear forwards;
+        animation-delay: 1.75s; */
+    }
+    section {
+        padding: 10px 20px;
+        justify-content: center;
+    }
+    .content .textBox {
+        align-items: center;
+        margin-right: auto;
+    }
+    .content .textBox p {
+        font-size: 0.8em;
+        text-align: center;
+        opacity: 0;
+        animation: slide_right 0.5s linear forwards;
+        animation-delay: 1.5s;
+    }
+    header {
+        padding: 20px;
+    }
+    .navigation {
+        display: none;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .smallnav1 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 180px;
+        right: 0;
+        top: -290px;
+        transition: 0.8s;
+        z-index: 9;
+    }
+    .smallnavlinks ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .smallnavlinks li a {
+        display: block;
+        text-align: center;
+        padding: 1rem;
+        text-decoration: none;
+        transition: 0.8s;
+    }
+    .whitetext {
+        color: #fff;
+    }
+    .smallnavlinks li a:hover,
+    .smallnavlinks li a.active {
+        /* background-color: rgb(36, 36, 36); */
+        color: #ff5e8e;
+    }
+    .actives .smallnav1 {
+        transform: translate(0px, 380px);
+        position: fixed;
+    }
+    .sco {
+        opacity: 0;
+        animation: slide_top 0.3s linear forwards;
+        animation-delay: calc(0.1s * var(--i));
+    }
+}
+
+
+/******************** Key Frames *********************/
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_top {
+    0% {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* light mode */
+
+.darktoggle {
+    position: absolute;
+    margin-left: 10px;
+}
+
+.sun {}
+
+.moon {}
+
+.whitebg {
+    background-color: #fff;
+}
+
+.whiteblur {
+    background-color: rgba(232, 232, 232, 0.5);
+}
+
+.blackbg {
+    background-color: #000;
+}
+
+.textblack {
+    color: black;
+}
+
+.darkpinkbg {
+    background-color: #b63a5f;
+}
+
+.offwhitebg {
+    background-color: #fce8ef;
+}
+
+.lightyellowbg {
+    background-color: #ffcee0;
+}
