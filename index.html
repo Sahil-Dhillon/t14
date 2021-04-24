@@ -14,9 +14,14 @@
     <section class="home">
 
         <header>
-            <div><a href="#" class="logo" onclick="dark()">TietFourteen</a>
-                <img class="sun darktoggle" src="https://img.icons8.com/clouds/50/000000/sun.png" />
-                <img class="moon darktoggle" src="https://img.icons8.com/plasticine/50/000000/crescent-moon.png" /></div>
+            <div><a href="#" class="logo">TietFourteen</a></div>
+            <div class="darktoggle" onclick="dark(this)">
+                <a href="#">
+                    <img class="sun " src="https://img.icons8.com/clouds/50/000000/sun.png" /></a>
+                <a href="#">
+                    <img class="moon " src="https://img.icons8.com/plasticine/50/000000/crescent-moon.png" />
+                </a>
+            </div>
 
             <ul class="navigation">
                 <li><a onclick="page('home')" href="#" style="--i:1" class="active">Home</a></li>
@@ -120,7 +125,8 @@
                 <tr style="--i:1">
                     <th class="time">8:00</th>
                     <td class="blanktdo"></td>
-                    <td class="uta18p">UTA018 P<span class="tooltiptext">hello</span></td>
+                    <td class="uta18p ">UTA018 P<span class="tooltiptext">hello</span>
+                    </td>
                     <td class="blanktdo"></td>
                     <td class="blanktdo"></td>
                     <td class="blanktdo"></td>

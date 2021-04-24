@@ -4,8 +4,8 @@ function navtoggle(x, y) {
     // document.getElementsByClassName('tnav')[].classList.toggle("actives");
 }
 
-function dark() {
-
+function dark(x) {
+    x.classList.toggle("darkmodetoggle");
     document.getElementsByClassName('darktoggle')
     document.querySelector('p').classList.toggle("textblack");
     document.getElementsByClassName('home')[0].classList.toggle("whitebg");

@@ -382,6 +382,16 @@ header ul li a:hover {
     animation-delay: 2s;
 }
 
+.darkmodetoggle .moon {
+    animation: upsidedown 0.4s ease-out forwards;
+    display: block;
+    opacity: 0;
+}
+
+.darkmodetoggle .sun {
+    display: none;
+}
+
 
 /* *********************Schedule****************** */
 
@@ -619,17 +629,38 @@ td:hover .tooltiptext {
     }
 }
 
+@keyframes upsidedown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    90% {
+        transform: translateY(20%);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 /* light mode */
 
 .darktoggle {
     position: absolute;
-    margin-left: 10px;
+    margin-left: 200px;
 }
 
-.sun {}
+.sun {
+    animation: upsidedown 0.4s ease-out forwards;
+    opacity: 0;
+}
 
-.moon {}
+.moon {
+    /* transform: translateY(-100px); */
+    opacity: 0;
+    display: none;
+}
 
 .whitebg {
     background-color: #fff;
