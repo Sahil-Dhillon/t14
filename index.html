@@ -11,40 +11,41 @@
 </head>
 
 <body>
+    <header>
+        <div><a href="#" class="logo">TietFourteen</a></div>
+        <div class="darktoggle" onclick="dark(this)">
+            <a href="#">
+                <img class="sun " src="https://img.icons8.com/clouds/50/000000/sun.png" /></a>
+            <a href="#">
+                <img class="moon " src="https://img.icons8.com/plasticine/50/000000/crescent-moon.png" />
+            </a>
+        </div>
+
+        <ul class="navigation">
+            <li><a onclick="page('home')" href="#" style="--i:1" class="active">Home</a></li>
+            <li><a onclick="page('schedule')" href="#" style="--i:2">Schedule</a></li>
+            <li><a onclick="page('exams')" href="#" style="--i:3">Exams</a></li>
+            <li><a onclick="page('study')" href="#" style="--i:4">Study Material</a></li>
+        </ul>
+        <div class="toggle-button" onclick="navtoggle(this,0)">
+            <span class="bar1 bar"></span>
+            <span class="bar2 bar"></span>
+            <span class="bar3 bar"></span>
+        </div>
+    </header>
+    <div class="tnav">
+        <div class="smallnav1 smallnavlinks">
+            <ul>
+                <li><a onclick="page('home')" href="#" class="active whitetext">Home</a></li>
+                <li><a class="whitetext" onclick="page('schedule')" href="#">Schedule</a></li>
+                <li><a class="whitetext" onclick="page('exams')" href="#">Exams</a></li>
+                <li><a class="whitetext" onclick="page('study')" href="#">Study Material</a></li>
+            </ul>
+        </div>
+    </div>
     <section class="home">
 
-        <header>
-            <div><a href="#" class="logo">TietFourteen</a></div>
-            <div class="darktoggle" onclick="dark(this)">
-                <a href="#">
-                    <img class="sun " src="https://img.icons8.com/clouds/50/000000/sun.png" /></a>
-                <a href="#">
-                    <img class="moon " src="https://img.icons8.com/plasticine/50/000000/crescent-moon.png" />
-                </a>
-            </div>
 
-            <ul class="navigation">
-                <li><a onclick="page('home')" href="#" style="--i:1" class="active">Home</a></li>
-                <li><a onclick="page('schedule')" href="#" style="--i:2">Schedule</a></li>
-                <li><a onclick="page('exams')" href="#" style="--i:3">Exams</a></li>
-                <li><a onclick="page('study')" href="#" style="--i:4">Study Material</a></li>
-            </ul>
-            <div class="toggle-button" onclick="navtoggle(this,0)">
-                <span class="bar1 bar"></span>
-                <span class="bar2 bar"></span>
-                <span class="bar3 bar"></span>
-            </div>
-        </header>
-        <div class="tnav">
-            <div class="smallnav1 smallnavlinks">
-                <ul>
-                    <li><a onclick="page('home')" href="#" class="active whitetext">Home</a></li>
-                    <li><a class="whitetext" onclick="page('schedule')" href="#">Schedule</a></li>
-                    <li><a class="whitetext" onclick="page('exams')" href="#">Exams</a></li>
-                    <li><a class="whitetext" onclick="page('study')" href="#">Study Material</a></li>
-                </ul>
-            </div>
-        </div>
 
         <div class="content">
 
@@ -87,30 +88,7 @@
     <!-- schedule -->
 
     <section id="schedule" class="schedule">
-        <header>
-            <a href="#" class="logo" onclick="dark()">TietFourteen</a>
-            <ul class="navigation">
-                <li><a onclick="page('home')" href="#" style="--i:1">Home</a></li>
-                <li><a onclick="page('schedule')" href="#" style="--i:2" class="active">Schedule</a></li>
-                <li><a onclick="page('exams')" href="#" style="--i:3">Exams</a></li>
-                <li><a onclick="page('study')" href="#" style="--i:4">Study Material</a></li>
-            </ul>
-            <div class="toggle-button" onclick="navtoggle(this,1)">
-                <span class="bar1 bar"></span>
-                <span class="bar2 bar"></span>
-                <span class="bar3 bar"></span>
-            </div>
-        </header>
-        <div id="tnav" class="tnav">
-            <div class="smallnav1 smallnavlinks">
-                <ul>
-                    <li><a class="whitetext" onclick="page('home')" href="#">Home</a></li>
-                    <li><a onclick="page('schedule')" href="#" class="active whitetext">Schedule</a></li>
-                    <li><a class="whitetext" onclick="page('exams')" href="#">Exams</a></li>
-                    <li><a class="whitetext" onclick="page('study')" href="#">Study Material</a></li>
-                </ul>
-            </div>
-        </div>
+
         <div class="tab">
             <table cellspacing="0" cellpadding="0" class="table-schedule">
                 <tr class="tabdays">
@@ -125,7 +103,7 @@
                 <tr style="--i:1">
                     <th class="time">8:00</th>
                     <td class="blanktdo"></td>
-                    <td class="uta18p ">UTA018 P<span class="tooltiptext">hello</span>
+                    <td class="uta18p ">UTA018 P<span class="tooltiptext">Computer Practical</span>
                     </td>
                     <td class="blanktdo"></td>
                     <td class="blanktdo"></td>
@@ -135,7 +113,7 @@
                 <tr style="--i:1.2">
                     <th class="time">8:50</th>
                     <td class="blanktde"></td>
-                    <td class="uta18p ">UTA018 P<span class="tooltiptext">hello</span></td>
+                    <td class="uta18p ">UTA018 P<span class="tooltiptext">Computer Practical</span></td>
                     <td class="blanktde"></td>
                     <td class="blanktde"></td>
                     <td class="blanktde"></td>
@@ -152,29 +130,29 @@
                 </tr>
                 <tr style="--i:1.6">
                     <th class="time">10:30</th>
-                    <td class="uec1p">UEC001 P<span class="tooltiptext">hello</span></td>
-                    <td class="uta15l">UTA015 L<span class="tooltiptext">hello</span></td>
-                    <td class="uec1p">UEC001 P<span class="tooltiptext">hello</span></td>
+                    <td class="uec1p">UEC001 P<span class="tooltiptext">Electronics Lecture</span></td>
+                    <td class="uta15l">UTA015 L<span class="tooltiptext">ED Lecture</span></td>
+                    <td class="uec1p">UEC001 P<span class="tooltiptext">Electronics Practical</span></td>
                     <td class="blanktde"></td>
-                    <td class="uph4p">UPH004 P<span class="tooltiptext">hello</span></td>
+                    <td class="uph4p">UPH004 P<span class="tooltiptext">Physics Practical</span></td>
 
                 </tr>
                 <tr style="--i:1.8">
                     <th class="time">11:20</th>
-                    <td class="uec1p">UEC001 P<span class="tooltiptext">hello</span></td>
-                    <td class="uma4l">UMA004 L<span class="tooltiptext">hello</span></td>
-                    <td class="uta15l">UTA015 L<span class="tooltiptext">hello</span></td>
-                    <td class="uma4l">UMA004 L<span class="tooltiptext">hello</span></td>
-                    <td class="uph4p">UPH004 P<span class="tooltiptext">hello</span></td>
+                    <td class="uec1p">UEC001 P<span class="tooltiptext">Electronics Practical</span></td>
+                    <td class="uma4l">UMA004 L<span class="tooltiptext">Maths Lecture</span></td>
+                    <td class="uta15l">UTA015 L<span class="tooltiptext">ED Lecture</span></td>
+                    <td class="uma4l">UMA004 L<span class="tooltiptext">Maths Lecture</span></td>
+                    <td class="uph4p">UPH004 P<span class="tooltiptext">Physics Practical</span></td>
 
                 </tr>
                 <tr style="--i:2">
                     <th class="time">12:10</th>
-                    <td class="uec1l">UEC001 L<span class="tooltiptext">hello</span></td>
-                    <td class="uta18l">UTA018 L<span class="tooltiptext">hello</span></td>
-                    <td class="uta18l">UTA018 L<span class="tooltiptext">hello</span></td>
-                    <td class="uec1l">UEC001 L<span class="tooltiptext">hello</span></td>
-                    <td class="uph4l">UPH004 L<span class="tooltiptext">hello</span></td>
+                    <td class="uec1l">UEC001 L<span class="tooltiptext">Electronics Lecture</span></td>
+                    <td class="uta18l">UTA018 L<span class="tooltiptext">Computer Lecture</span></td>
+                    <td class="uta18l">UTA018 L<span class="tooltiptext">Computer Lecture</span></td>
+                    <td class="uec1l">UEC001 L<span class="tooltiptext">Electronics Lecture</span></td>
+                    <td class="uph4l">UPH004 L<span class="tooltiptext">Physics Lecture</span></td>
 
                 </tr>
                 <tr style="--i:2.2">
@@ -189,35 +167,35 @@
                 </tr>
                 <tr style="--i:2.4">
                     <th class="time">1:50</th>
-                    <td class="uph4l">UPH004 L<span class="tooltiptext">hello</span></td>
-                    <td class="uph4l">UPH004 L<span class="tooltiptext">hello</span></td>
-                    <td class="uma4t">UMA004 T<span class="tooltiptext">hello</span></td>
+                    <td class="uph4l">UPH004 L<span class="tooltiptext">Physics lecture</span></td>
+                    <td class="uph4l">UPH004 L<span class="tooltiptext">Physics lecture</span></td>
+                    <td class="uma4t">UMA004 T<span class="tooltiptext">Maths Tutorial</span></td>
                     <td class="blanktde"></td>
-                    <td class="uhu3l">UHU003 L<span class="tooltiptext">hello</span></td>
+                    <td class="uhu3l">UHU003 L<span class="tooltiptext">Profcomm Lecture</span></td>
 
                 </tr>
                 <tr style="--i:2.6">
                     <th class="time">2:40</th>
-                    <td class="uma4l">UMA004 L<span class="tooltiptext">hello</span></td>
-                    <td class="uta15p">UTA015 P<span class="tooltiptext">hello</span></td>
-                    <td class="uta15p">UTA015 P<span class="tooltiptext">hello</span></td>
+                    <td class="uma4l">UMA004 L<span class="tooltiptext">Maths Lecture</span></td>
+                    <td class="uta15p">UTA015 P<span class="tooltiptext">ED Practical</span></td>
+                    <td class="uta15p">UTA015 P<span class="tooltiptext">ED Practical</span></td>
                     <td class="blanktdo"></td>
-                    <td class="uph4t">UPH004 T<span class="tooltiptext">hello</span></td>
+                    <td class="uph4t">UPH004 T<span class="tooltiptext">Physics Tutorial</span></td>
 
                 </tr>
                 <tr style="--i:2.8">
                     <th class="time">3:30</th>
-                    <td class="uta18l">UTA018 L<span class="tooltiptext">hello</span></td>
-                    <td class="uta15p">UTA015 P<span class="tooltiptext">hello</span></td>
-                    <td class="uta15p">UTA015 P<span class="tooltiptext">hello</span></td>
+                    <td class="uta18l">UTA018 L<span class="tooltiptext">Computer Lecture</span></td>
+                    <td class="uta15p">UTA015 P<span class="tooltiptext">ED Practical</span></td>
+                    <td class="uta15p">UTA015 P<span class="tooltiptext">ED Practical</span></td>
                     <td class="blanktde"></td>
-                    <td class="uec1t">UEC001 T<span class="tooltiptext">hello</span></td>
+                    <td class="uec1t">UEC001 T<span class="tooltiptext">Electronics Tutorial</span></td>
 
                 </tr>
                 <tr style="--i:3">
                     <th class="time">4:20</th>
-                    <td class="uhu3l">UHU003 L<span class="tooltiptext">hello</span></td>
-                    <td class="uhu3p">UHU003 P<span class="tooltiptext">hello</span></td>
+                    <td class="uhu3l">UHU003 L<span class="tooltiptext">Profcomm Lecture</span></td>
+                    <td class="uhu3p">UHU003 P<span class="tooltiptext">Profcomm Practical</span></td>
                     <td class="blanktdo"></td>
                     <td class="blanktdo"></td>
                     <td class="blanktdo"></td>
@@ -226,7 +204,7 @@
                 <tr style="--i:3.2">
                     <th class="time">5:10</th>
                     <td class="blanktde"></td>
-                    <td class="uhu3p">UHU003 P<span class="tooltiptext">hello</span></td>
+                    <td class="uhu3p">UHU003 P<span class="tooltiptext">Profcomm Practical</span></td>
                     <td class="blanktde"></td>
                     <td class="blanktde"></td>
                     <td class="blanktde"></td>
@@ -264,58 +242,12 @@
     <!-- exams -->
 
     <section id="exams" class="exams">
-        <header>
-            <a href="#" class="logo" onclick="dark()">TietFourteen</a>
-            <ul class="navigation">
-                <li><a onclick="page('home')" href="#" style="--i:1">Home</a></li>
-                <li><a onclick="page('schedule')" href="#" style="--i:2">Schedule</a></li>
-                <li><a onclick="page('exams')" href="#" style="--i:3" class="active">Exams</a></li>
-                <li><a onclick="page('study')" href="#" style="--i:4">Study Material</a></li>
-            </ul>
-            <div class="toggle-button" onclick="navtoggle(this,2)">
-                <span class="bar1 bar"></span>
-                <span class="bar2 bar"></span>
-                <span class="bar3 bar"></span>
-            </div>
-        </header>
-        <div class="tnav">
-            <div class="smallnav1 smallnavlinks">
-                <ul>
-                    <li><a class="whitetext" onclick="page('home')" href="#">Home</a></li>
-                    <li><a class="whitetext" onclick="page('schedule')" href="#">Schedule</a></li>
-                    <li><a onclick="page('exams')" href="#" class="active whitetext">Exams</a></li>
-                    <li><a class="whitetext" onclick="page('study')" href="#">Study Material</a></li>
-                </ul>
-            </div>
-        </div>
+
     </section>
 
     <!-- study material -->
     <section id="study" class="study">
-        <header>
-            <a href="#" class="logo" onclick="dark()">TietFourteen</a>
-            <ul class="navigation">
-                <li><a onclick="page('home')" href="#" style="--i:1">Home</a></li>
-                <li><a onclick="page('schedule')" href="#" style="--i:2">Schedule</a></li>
-                <li><a onclick="page('exams')" href="#" style="--i:3">Exams</a></li>
-                <li><a onclick="page('study')" href="#" style="--i:4" class="active">Study Material</a></li>
-            </ul>
-            <div class="toggle-button" onclick="navtoggle(this,3)">
-                <span class="bar1 bar"></span>
-                <span class="bar2 bar"></span>
-                <span class="bar3 bar"></span>
-            </div>
-        </header>
-        <div class="tnav">
-            <div class="smallnav1 smallnavlinks">
-                <ul>
-                    <li><a class="whitetext" onclick="page('home')" href="#">Home</a></li>
-                    <li><a class="whitetext" onclick="page('schedule')" href="#">Schedule</a></li>
-                    <li><a class="whitetext" onclick="page('exams')" href="#">Exams</a></li>
-                    <li><a onclick="page('study')" href="#" class="active whitetext">Study Material</a></li>
-                </ul>
-            </div>
-        </div>
+
     </section>
 </body>
 
