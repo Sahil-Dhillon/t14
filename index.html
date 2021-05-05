@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TietFourteen</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -22,10 +22,12 @@
         </div>
 
         <ul class="navigation">
-            <li><a onclick="page('home')" href="#" style="--i:1" class="active">Home</a></li>
-            <li><a onclick="page('schedule')" href="#" style="--i:2">Schedule</a></li>
-            <li><a onclick="page('exams')" href="#" style="--i:3">Exams</a></li>
-            <li><a onclick="page('study')" href="#" style="--i:4">Study Material</a></li>
+            <li><a onclick="page('home',this)" href="#" style="--i:1">Home</a>
+                <hr class="active">
+            </li>
+            <li><a onclick="page('schedule',this)" href="#" style="--i:2">Schedule</a></li>
+            <li><a onclick="page('exams',this)" href="#" style="--i:3">Exams</a></li>
+            <li><a onclick="page('study',this)" href="#" style="--i:4">Study Material</a></li>
         </ul>
         <div class="toggle-button" onclick="navtoggle(this,0)">
             <span class="bar1 bar"></span>
@@ -41,6 +43,14 @@
                 <li><a class="whitetext" onclick="page('exams')" href="#">Exams</a></li>
                 <li><a class="whitetext" onclick="page('study')" href="#">Study Material</a></li>
             </ul>
+        </div>
+    </div>
+    <div class="clock">
+        <div class="display">
+        </div>
+        <div class="live">
+            <h3 id="ongoing" class="ongoing">Loading...</h3>
+            <a id="linklive" href="#" target="_blank" class="linklive"> JOIN  LIVE</a>
         </div>
     </div>
     <section class="home">
@@ -249,6 +259,7 @@
     <section id="study" class="study">
 
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
