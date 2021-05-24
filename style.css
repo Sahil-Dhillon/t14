@@ -3,49 +3,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
 .clock {
-    z-index: 10;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0px;
-    width: 150px;
-    background: #131419;
-    height: 200px;
-    line-height: 25px;
+    position: relative;
+    width: 100%;
+    /* background: #131419; */
+    height: 250px;
+    /* line-height: 25px; */
     text-align: center;
-    padding: 10px 10px;
-    box-shadow: -3px -3px 7px rgba(44, 44, 44, 0.453), 3px 3px 5px rgba(0, 0, 0, 0.5);
+    /* padding: 10px 10px; */
+    /* box-shadow: -3px -3px 7px rgba(44, 44, 44, 0.453), 3px 3px 5px rgba(0, 0, 0, 0.5); */
     /* box-shadow: -30px 3px 49px 0px rgba(62, 66, 66, 0.32); */
     /* box-shadow: -20px 20px 60px #d3d3d3, 20px -20px 60px #ededed; */
 }
 
 .clock .display {
-    font-size: 15px;
-    color: #ff437c;
+    font-size: 35px;
+    color: #ffffff;
     letter-spacing: 5px;
     font-family: 'Orbitron', sans-serif;
 }
 
-.clock .live {
-    margin-top: 80px;
-}
-
-.clock .ongoing {
+.live {
+    /* margin-top: 50px; */
+    margin-bottom: 10px;
     color: white;
-    border: 1px red;
 }
 
-.clock .linklive {
+.ongoing {
+    color: white;
+}
+
+.linklive {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     width: 70px;
     font-size: 0.8em;
     padding: 5px 25px;
+    margin-bottom: 10px;
     color: white;
     background-color: red;
     border: 1px solid red;
     opacity: 1;
     animation: blinking 1s infinite;
+}
+
+#nextclass {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8em;
+}
+
+.nextclass {
+    color: white;
+    font-weight: 600;
+    font-family: Helvetica, sans-serif;
 }
 
 
@@ -141,6 +151,8 @@
 
 .home {
     transition: 0.8s;
+    display: flex;
+    flex-direction: column;
     /* display: none; */
 }
 
@@ -204,11 +216,12 @@ header ul li {
 
 hr {
     background-color: #ff5e8e;
-    width: 10%;
+    display: none;
+    width: 100%;
     margin: auto;
     border: 1px solid #ff5e8e;
-    height: 4px;
-    /* border-radius: 2px; */
+    height: 1px;
+    /* border-radius: 20px; */
 }
 
 header ul li a {
@@ -227,8 +240,9 @@ header ul li a {
     animation-delay: calc(0.1s * var(--i));
 }
 
-.active a {
+.active hr {
     color: #ff5e8e;
+    display: block;
 }
 
 header ul li a:hover {
@@ -239,6 +253,8 @@ header ul li a:hover {
 
 .content {
     position: relative;
+    width: 100%;
+    padding: 0px 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -248,7 +264,7 @@ header ul li a:hover {
 .content .textBox {
     position: relative;
     max-width: 550px;
-    margin-right: 200px;
+    /* margin-right: 200px; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -257,21 +273,21 @@ header ul li a:hover {
 .content .textBox h2 {
     color: #0169b2;
     font-size: 4.5em;
-    margin-bottom: 10px;
-    line-height: 1.2em;
-    font-weight: 600;
-    font-family: 'Nunito';
+    /* margin-bottom: 10px; */
+    /* line-height: 1.2em; */
+    font-weight: 800;
+    /* font-family: 'Nunito'; */
     opacity: 0;
-    animation: slide_right 0.5s linear forwards;
+    animation: slide_right 0.4s linear forwards;
     animation-delay: 1.5s;
 }
 
-.content .textBox p {
+.content .textBox .live {
     font-size: 1.2em;
     /* color: white; */
     font-family: Arial, Helvetica, sans-serif;
     opacity: 0;
-    animation: slide_right 0.5s linear forwards;
+    animation: slide_right 0.6s linear forwards;
     animation-delay: 1.5s;
     transition: 0.8s;
 }

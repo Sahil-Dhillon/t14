@@ -22,12 +22,12 @@
         </div>
 
         <ul class="navigation">
-            <li><a onclick="page('home',this)" href="#" style="--i:1">Home</a>
-                <hr class="active">
+            <li><a onclick="page('home',this)" href="#" style="--i:1">Home<hr class="active"></a>
+
             </li>
-            <li><a onclick="page('schedule',this)" href="#" style="--i:2">Schedule</a></li>
-            <li><a onclick="page('exams',this)" href="#" style="--i:3">Exams</a></li>
-            <li><a onclick="page('study',this)" href="#" style="--i:4">Study Material</a></li>
+            <li><a onclick="page('schedule',this)" href="#" style="--i:2">Schedule<hr class="active"></a></li>
+            <li><a onclick="page('exams',this)" href="#" style="--i:3">Exams<hr class="active"></a></li>
+            <li><a onclick="page('study',this)" href="#" style="--i:4">Study Material<hr class="active"></a></li>
         </ul>
         <div class="toggle-button" onclick="navtoggle(this,0)">
             <span class="bar1 bar"></span>
@@ -39,30 +39,32 @@
         <div class="smallnav1 smallnavlinks">
             <ul>
                 <li><a onclick="page('home')" href="#" class="active whitetext">Home</a></li>
-                <li><a class="whitetext" onclick="page('schedule')" href="#">Schedule</a></li>
+                <li><a class="whitetext" onclick="page('schedule')" href="#"><span>Schedule</span></a></li>
                 <li><a class="whitetext" onclick="page('exams')" href="#">Exams</a></li>
                 <li><a class="whitetext" onclick="page('study')" href="#">Study Material</a></li>
             </ul>
         </div>
     </div>
-    <div class="clock">
-        <div class="display">
-        </div>
-        <div class="live">
-            <h3 id="ongoing" class="ongoing">Loading...</h3>
-            <a id="linklive" href="#" target="_blank" class="linklive"> JOIN  LIVE</a>
-        </div>
-    </div>
+
     <section class="home">
 
+        <div class="clock">
+            <div class="display">
+            </div>
 
+        </div>
 
         <div class="content">
 
             <div class="scoe14"> <img id="slogo" class="scoe14" src="img/logowhite.png" alt=""></div>
             <div class="textBox">
                 <h2>COE14</h2>
-                <p class="homep">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tempore provident non nobis fuga quod voluptatem ab necessitatibus suscipit expedita!</p>
+                <div class="live">
+                    <h3 id="ongoing" class="ongoing">Loading...</h3>
+                    <a id="linklive" href="#" target="_blank" class="linklive"> JOIN  LIVE</a>
+                </div>
+                <div class="nextclass">Upcoming: </div>
+                <div id="nextclass">-----------</div>
             </div>
             <!-- <div class="coe14"></div> -->
             <img id="logo" src="img/logowhite.png" class="coe14" alt="">

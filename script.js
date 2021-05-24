@@ -33,7 +33,7 @@ setInterval(function() {
 function dark(x) {
     x.classList.toggle("darkmodetoggle");
     document.getElementsByClassName('darktoggle')
-    document.querySelector('p').classList.toggle("textblack");
+        // document.querySelector('div').classList.toggle("textblack");
     document.getElementsByClassName('home')[0].classList.toggle("whitebg");
     document.getElementsByClassName('schedule')[0].classList.toggle("whitebg");
 
@@ -93,43 +93,51 @@ function page(x, y) {
 
 
 }
-
+var nextclass = document.getElementById('nextclass');
 var ongoinglink = document.getElementById('linklive');
 var ongoing = document.getElementById('ongoing');
 var currclass = "Loading...";
 var currlink = "#";
-const currentDate = new Date();
-const day = currentDate.getDay();
+var upclass = 'Upcoming: ---------';
 
 setInterval(() => {
-    
-
-
+    const currentDate = new Date();
+    const day = currentDate.getDay();
+    nextclass.innerHTML = upclass;
+    ongoinglink.href = currlink;
     ongoing.innerHTML = currclass;
     let sec = currentDate.getSeconds();
     let min = currentDate.getMinutes();
     let hr = currentDate.getHours();
     var time = hr * 100 + min;
     console.log(time);
-    // String time = DateFormat()
+    if (currlink == "") {
+        ongoinglink.style.cursor = " not-allowed"
+        ongoinglink.style.backgroundColor = "#c0c0c0"
+        ongoinglink.style.borderColor = "gray"
+        ongoinglink.style.animation = "none";
+        ongoinglink.style.pointerEvents = "none";
+
+    }
+
     switch (day) {
         case 1:
-            //########################################                  MONDAY                 ################################
+            //#####################           MONDAY              ################################
             if (time < 800) {
                 currclass = "........";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Electronics Practical @ 10:30";
             } else if (time >= 800 && time <= 850) {
                 currclass = ".......";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Electronics Practical @ 10:30";
             } else if (time >= 850 && time <= 940) {
                 currclass = ".......";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Electronics Practical @ 10:30";
             } else if (time >= 940 && time <= 1030) {
                 currclass = ".......";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Electronics Practical @ 10:30";
             } else if (time >= 1030 && time <= 1120) {
                 currclass = "Electronics Practical";
@@ -169,15 +177,15 @@ setInterval(() => {
                 upclass = "none";
             } else {
                 currclass = "It's over now!";
-                currlink = ".......";
-                upclass = ".......";
+                currlink = "";
+                upclass = "none";
             }
             break;
         case 2:
             //Tuesday
             if (time < 800) {
                 currclass = "........";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Computer Practical @ 8:00";
             } else if (time >= 800 && time <= 850) {
                 currclass = "Computer Practical";
@@ -230,15 +238,14 @@ setInterval(() => {
             } else {
                 currclass = "It's over now!";
                 currlink = "";
-                upclass = "";
+                upclass = "none";
             }
-
             break;
         case 3:
             //######################################      Wednesday           ########################################
             if (time < 800) {
                 currclass = "........";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Electronics Practical @ 10:30";
             } else if (time >= 800 && time <= 850) {
                 currclass = ".......";
@@ -298,7 +305,7 @@ setInterval(() => {
             //#######################################             Thursdayyyyy           ################
             if (time < 800) {
                 currclass = "........";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Maths Lecture @ 11:20";
             } else if (time >= 800 && time <= 850) {
                 currclass = ".......";
@@ -323,7 +330,7 @@ setInterval(() => {
             } else if (time >= 1210 && time <= 1300) {
                 currclass = "Electronics Lecture";
                 currlink = "https://tiet.zoom.us/my/eced2";
-                upclass = ".......";
+                upclass = "none";
             }
             // else if (time >= 1300 && time <= 1350) {
             //   currclass = "Break!";
@@ -352,26 +359,26 @@ setInterval(() => {
             else {
                 currclass = "It's over now!";
                 currlink = "";
-                upclass = ".......";
+                upclass = "none";
             }
             break;
         case 5:
             //#######################################                    Fridayyy               #############################
             if (time < 800) {
                 currclass = "........";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Physics Practical @ 10:30";
             } else if (time >= 800 && time <= 850) {
-                currclass = "Break";
+                currclass = ".......";
                 currlink = "";
                 upclass = "Physics Practical @ 10:30";
             } else if (time >= 850 && time <= 940) {
                 currclass = ".......";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Physics Practical @ 10:30";
             } else if (time >= 940 && time <= 1030) {
                 currclass = ".......";
-                currlink = ".......";
+                currlink = "";
                 upclass = "Physics Practical @ 10:30";
             } else if (time >= 1030 && time <= 1120) {
                 currclass = "Physics Practical";
@@ -400,7 +407,7 @@ setInterval(() => {
             } else if (time >= 1530 && time <= 1620) {
                 currclass = "Electronics Tut";
                 currlink = "";
-                upclass = ".......";
+                upclass = "none";
                 // } else if (time >= 1620 && time <= 1710) {
                 //   currclass = "Profcomm Practical";
                 //   currlink = "";
@@ -410,21 +417,23 @@ setInterval(() => {
                 //   currlink = "";
                 //   upclass = "#";
             } else {
-                currclass = "It's over now!";
+                currclass = "It's over!";
                 currlink = "";
-                upclass = ".......";
+                upclass = "none";
             }
             break;
         case 6:
             //###############################                    Saturdayyyy              ##########################
             //
-            currclass = "No classes today 😁";
+            currclass = "No classes today !";
+            currlink = "";
             break;
         case 0:
             //#####################################                  Sundayyyyyyyyyyyy         ###########################
-            currclass = "No classes today 😁";
+            currclass = "No classes today !";
+            currlink = "";
             break;
         default:
             break;
     }
-}, 1000);
+});
