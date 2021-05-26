@@ -38,6 +38,7 @@ function dark(x) {
     document.getElementsByClassName('schedule')[0].classList.toggle("whitebg");
 
     var header = document.querySelectorAll('header');
+    var footer = document.querySelectorAll('footer');
     var smallnav1 = document.querySelectorAll('.smallnav1');
     var evenrows = document.getElementsByClassName('blanktde');
     var oddrows = document.getElementsByClassName('blanktdo');
@@ -65,6 +66,7 @@ function dark(x) {
     for (let i = 0; i < header.length; i++) {
         header[i].classList.toggle("whitebg");
         smallnav1[i].classList.toggle("whiteblur");
+        footer[i].classList.toggle("whitebg");
     }
 
     var image = document.getElementById('logo');
@@ -73,11 +75,11 @@ function dark(x) {
     } else {
         image.src = "img/logowhite.png";
     }
-    var images = document.getElementById('slogo');
-    if (images.src.match("img/logowhite.png")) {
-        images.src = "img/logoblack.png";
+    var images = document.getElementById('ttimg');
+    if (images.src.match("img/timetabledark.png")) {
+        images.src = "img/timetablelight.png";
     } else {
-        images.src = "img/logowhite.png";
+        images.src = "img/timetabledark.png";
     }
     // document.getElementById('homep').classList.toggle('whitebg');
 
@@ -88,8 +90,17 @@ function page(x, y) {
     document.getElementsByClassName('exams')[0].style.display = 'none';
     document.getElementsByClassName('study')[0].style.display = 'none';
     document.getElementsByClassName('schedule')[0].style.display = 'none';
+
+
     document.getElementsByClassName(x)[0].style.display = 'flex';
-    y.classList.toggle("active");
+    document.querySelectorAll('header ul li a')[0].style.color = '#0169b2';
+    document.querySelectorAll('header ul li a')[1].style.color = '#0169b2';
+    document.querySelectorAll('header ul li a')[2].style.color = '#0169b2';
+    document.querySelectorAll('header ul li a')[3].style.color = '#0169b2';
+
+
+    // y.classList.toggle("active");
+    y.style.color = "#ff5e8e";
 
 
 }
@@ -118,6 +129,9 @@ setInterval(() => {
         ongoinglink.style.animation = "none";
         ongoinglink.style.pointerEvents = "none";
 
+    } else {
+        ongoinglink.style.opacity = 1;
+        ongoinglink.style.animation = "blinking 1s infinite"
     }
 
     switch (day) {
