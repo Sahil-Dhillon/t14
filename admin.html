@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | TietFourteen</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#div1").load("Notice.txt", function(responseTxt, statusTxt, xhr) {
+                    if (statusTxt == "success")
+                        alert("External content loaded successfully!");
+                    if (statusTxt == "error")
+                        alert("Error: " + xhr.status + ": " + xhr.statusText);
+                });
+            });
+
+        });
+    </script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+    * {
+        margin: 0px;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, system-ui, "Segoe UI", -apple-system, BlinkMacSystemFont, Ubuntu, "Helvetica Neue", sans-serif;
+    }
+    
+    .main {
+        margin: 0;
+        height: 100vh;
+        background-color: #131419;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card {
+        height: 50%;
+        width: 300px;
+        max-width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .wrapper {
+        display: block;
+        position: relative;
+        /* width: 300px; */
+    }
+    
+    .textfield {
+        padding: 10px;
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: #131419;
+        outline: none;
+        font-size: 16px;
+        color: cornsilk;
+    }
+    
+    .placeholder {
+        position: absolute;
+        left: 9px;
+        top: 10px;
+        padding: 0 4px;
+        color: white;
+        background-color: #131419;
+        transform-origin: top left;
+        transition: all 120ms ease-in;
+    }
+    
+    .textfield:focus+.placeholder,
+    .textfield:not(:placeholder-shown)+.placeholder {
+        top: -5px;
+        transform: scale(0.8);
+        font-weight: bold;
+    }
+    
+    button {
+        width: 50%;
+        height: 32px;
+    }
+    
+    p {
+        color: white;
+    }
+</style>
+
+<body>
+    <section class="main">
+        <div class="card">
+
+            <form action="" method="GET">
+                <label class="wrapper">
+                    <textarea name="notice" class="textfield"autocomplete="off" placeholder=" "cols="30" rows="1"></textarea>
+                    
+                    <span class="placeholder">New Announcement</span>
+                  </label>
+
+                <br>
+                <button id="submit" type="submit">Post</button>
+            </form>
+            <p id="div1"></p>
+        </div>
+    </section>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyB_rg_urefa2862dzsRUCsDMfs9WDelF4U",
+            authDomain: "tiet14.firebaseapp.com",
+            databaseURL: "https://tiet14-default-rtdb.firebaseio.com",
+            projectId: "tiet14",
+            storageBucket: "tiet14.appspot.com",
+            messagingSenderId: "751598998811",
+            appId: "1:751598998811:web:a50f4dbb2403aa7e79afbe",
+            measurementId: "G-GLJ0BWFQKL"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        firebase.database();
+    </script>
+</body>
+
+</html>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TietFourteen</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -27,7 +28,7 @@
                 </li>
                 <li><a onclick="page('schedule',this)" href="#" style="--i:2">Schedule</a></li>
                 <li><a onclick="page('exams',this)" href="#" style="--i:3">Exams</a></li>
-                <li><a onclick="page('study',this)" href="#" style="--i:4">Study Material</a></li>
+                <li><a onclick="page('study',this)" id="noticeNav" href="#" style="--i:4">Study Material</a></li>
             </ul>
             <div class="toggle-button" onclick="navtoggle(this,0)">
                 <span class="bar1 bar"></span>
@@ -38,7 +39,7 @@
         <div class="clock">
             <div class="display whitetext">
             </div>
-
+            <marquee class="noticeData"></marquee>
         </div>
     </header>
     <div class="tnav">
@@ -215,11 +216,63 @@
     <!-- exams -->
 
     <section id="exams" class="exams">
-
+        <table>
+            <tr>
+                <th>S.No.</th>
+                <th>Subject</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ENGINEERING DRAWING UTA015</td>
+                <td>23-06-2021</td>
+                <td>02:30 PM</td>
+                <td>Not Available</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>PROFF COMM UHU003</td>
+                <td>25-06-2021</td>
+                <td>02:30 PM</td>
+                <td>Not Available</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>APPLIED PHYSICS UPH004</td>
+                <td>28-06-2021</td>
+                <td>02:30 PM</td>
+                <td>Not Available</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>COMPUTER PROGRAMMING UTA018</td>
+                <td>30-06-2021</td>
+                <td>02:30 PM</td>
+                <td>Not Available</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>ELECTRONICS UEC001</td>
+                <td>02-07-2021</td>
+                <td>02:30 PM</td>
+                <td>Not Available</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>MAtdEMATICS UMA004</td>
+                <td>07-07-2021</td>
+                <td>02:30 PM</td>
+                <td>Not Available</td>
+            </tr>
+        </table>
     </section>
 
     <!-- study material -->
     <section id="study" class="study">
+        <p class="backData">NaN</p><br>
+        <p class="backData2">NaN</p>
 
     </section>
 
@@ -250,11 +303,63 @@
         </ul>
         <hr>
         <div style="color: rgb(100, 100, 100);">
-            © made with 💖 by SAHIL DHILLON
+            © made with ❤ by SAHIL DHILLON
         </div>
     </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyB_rg_urefa2862dzsRUCsDMfs9WDelF4U",
+            authDomain: "tiet14.firebaseapp.com",
+            databaseURL: "https://tiet14-default-rtdb.firebaseio.com",
+            projectId: "tiet14",
+            storageBucket: "tiet14.appspot.com",
+            messagingSenderId: "751598998811",
+            appId: "1:751598998811:web:b32f6d054232afdd79afbe",
+            measurementId: "G-BMK0LQ5MGY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        firebase.database();
+    </script>
     <script src="script.js"></script>
+    <script src="form.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.backData').css('color', 'white');
+            $('.backData2').css('color', 'white');
+            $.get("Notice.txt", function(data, status) {
+                // alert("Data: " + data + "\nStatus: " + status);
+                console.log("Status: " + status);
+                $('.noticeData').html(data);
+            });
+
+            // $("#noticeNav").click(function() {
+            //     // $('.backData').html('ConnectedJS');
+
+            //     $('.noticeData').load("Notice.txt", function(responseTxt, statusTxt, xhr) {
+            //         if (statusTxt == "success") {
+            //             console.log("External content loaded successfully!");
+            //         } else if (statusTxt == "error")
+            //             alert("Error: " + xhr.status + ": " + xhr.statusText);
+            //     });
+
+            // });
+
+
+        });
+    </script>
+
 </body>
 
 </html>

@@ -147,6 +147,7 @@
 .exams {
     transition: 0.8s;
     display: none;
+    justify-content: center;
 }
 
 .study {
@@ -241,6 +242,13 @@ header ul li a:hover {
     /* background: #0169b2; */
     color: #ff5e8e;
     /* border-radius: 3px; */
+}
+
+.noticeData {
+    color: whitesmoke;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
@@ -539,6 +547,13 @@ td:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
     bottom: 80%;
+}
+
+
+/* EXAMS */
+
+.exams th {
+    background-color: #0169b2;
 }
 
 
