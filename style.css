@@ -134,6 +134,10 @@
     user-select: none;
 }
 
+body {
+    background-color: #131419;
+}
+
 ::-webkit-scrollbar {
     width: 3px;
 }
@@ -142,12 +146,15 @@
     transition: 0.8s;
     display: flex;
     flex-direction: column;
+    padding: 4rem 0;
 }
 
 .exams {
     transition: 0.8s;
     display: none;
     justify-content: center;
+    align-items: center;
+    padding: 6rem;
 }
 
 .study {
@@ -158,17 +165,17 @@
 section {
     position: relative;
     width: 100%;
-    min-height: 90vh;
-    max-height: 100vh;
-    padding: 100px;
+    height: 100%;
+    /* max-height: 80vh; */
+    padding: 0 100px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color: #131419;
 }
 
 header {
-    position: fixed;
+    /* position: fix; */
     top: 0;
     left: 0;
     width: 100%;
@@ -250,7 +257,7 @@ header ul li a:hover {
 }
 
 footer {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
     display: flex;
@@ -263,7 +270,7 @@ footer {
 
 .content {
     width: 100%;
-    padding: 50px 80px;
+    padding: 1rem 150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -352,8 +359,8 @@ footer {
 
 .coe14 {
     position: relative;
-    max-width: 350px;
-    padding-top: 18px;
+    width: 170px;
+    /* padding-top: 18px; */
     /* bottom: 0;
     right: 150px; */
     opacity: 0;
@@ -444,7 +451,9 @@ footer {
     display: none;
     position: relative;
     justify-content: center;
-    padding: 130px;
+    padding: 2rem 130px;
+    display: flex;
+    align-items: center;
 }
 
 .imgcontent {
@@ -455,7 +464,7 @@ footer {
 /* table */
 
 .tab {
-    position: absolute;
+    /* position: absolute; */
     /* left: 50px; */
     max-width: 100%;
     opacity: 0;
