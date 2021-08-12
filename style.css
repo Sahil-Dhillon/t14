@@ -135,7 +135,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 3px;
 }
 
 .home {
@@ -158,15 +158,13 @@
 section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     max-height: 100vh;
     padding: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background-color: #131419;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 header {
@@ -184,7 +182,7 @@ header .navcontainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0px;
+    margin: 8px 0px;
     /* margin-bottom: 20px; */
 }
 
@@ -559,7 +557,7 @@ td:hover .tooltiptext {
 
 /* responsive */
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     section {
         padding: 10px 20px;
         justify-content: center;
@@ -672,7 +670,7 @@ td:hover .tooltiptext {
         color: #ff5e8e;
     }
     .actives .smallnav1 {
-        transform: translate(0px, 442px);
+        transform: translate(0px, 454px);
         position: fixed;
     }
     .sco {
