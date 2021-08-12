@@ -557,6 +557,20 @@ td:hover .tooltiptext {
 
 /* responsive */
 
+@media (max-width: 900px) {
+    header ul li a {
+        padding: 0px 6px;
+        margin: 4px 5px;
+        font-size: 1rem;
+    }
+    header .navcontainer {
+        margin: 0px 4px;
+    }
+    .darktoggle {
+        margin-left: 100px;
+    }
+}
+
 @media (max-width: 700px) {
     section {
         padding: 10px 20px;
