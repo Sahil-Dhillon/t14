@@ -452,7 +452,6 @@ footer {
     position: relative;
     justify-content: center;
     padding: 2rem 130px;
-    display: flex;
     align-items: center;
 }
 
