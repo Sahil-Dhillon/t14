@@ -4,7 +4,7 @@ function navtoggle(x, y) {
     // document.getElementsByClassName('tnav')[].classList.toggle("actives");
 }
 
-setInterval(function() {
+setInterval(function () {
     const clock = document.querySelector(".display");
     let time = new Date();
     let sec = time.getSeconds();
@@ -33,7 +33,7 @@ setInterval(function() {
 function dark(x) {
     x.classList.toggle("darkmodetoggle");
     document.getElementsByClassName('darktoggle')
-        // document.querySelector('div').classList.toggle("textblack");
+    // document.querySelector('div').classList.toggle("textblack");
     document.getElementsByClassName('home')[0].classList.toggle("whitebg");
     document.getElementsByClassName('schedule')[0].classList.toggle("whitebg");
 
@@ -121,7 +121,6 @@ setInterval(() => {
     let min = currentDate.getMinutes();
     let hr = currentDate.getHours();
     var time = hr * 100 + min;
-    console.log(time);
     if (currlink == "") {
         ongoinglink.style.cursor = " not-allowed"
         ongoinglink.style.backgroundColor = "#c0c0c0"
